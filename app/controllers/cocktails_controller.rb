@@ -12,6 +12,7 @@ class CocktailsController < ApplicationController
   end
 
   def index
+    @cocktails = Cocktail.all
   end
 
   def destroy
