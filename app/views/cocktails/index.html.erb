@@ -1,8 +1,11 @@
-<h1>Cocktails#index</h1>
-
 <div class="text-center">
+<h1>Cocktails#index</h1>
+   <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_cocktail_path %>
+   <br>
+
   <% @cocktails.each do |cocktail| %>
-  <h1><%= cocktail.name  %></h1>
+  <h1><%= link_to cocktail.name, cocktail_path(cocktail)  %></h1>
+  <%= link_to '<i class="fa fa-add" aria-hidden="true"></i>'.html_safe, edit_cocktail_path(cocktail) %>
 
   <% end %>
 </div>

@@ -1,5 +1,21 @@
-<h1>Cocktails#show</h1>
+<div class="text-center">
+  <h1>Cocktails#show</h1>
 
+  <h1><%= @cocktail.name %></h1>
 
+  <br>
+  <br>
 
+  <h1>Ingredients</h1>
+  <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_cocktail_dose_path(@cocktail) %>
 
+  <% @ingredients.each do |ingredient| %>
+  <div class="panel panel-default">
+    <h4><%= ingredient.name %></h4>
+    <p><%= @doses.where(ingredient_id: ingredient).first.description%></p>
+    <br>
+  </div>
+  <% end %>
+
+  <p><%= link_to "Back", cocktails_path  %></p>
+</div>

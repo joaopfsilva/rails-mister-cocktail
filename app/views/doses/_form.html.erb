@@ -1,0 +1,28 @@
+<div class="row">
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit :class => 'btn btn-primary' %>
+
+  <% end %>
+</div>
+
+<!--
+simple_form_for @dose(nil)
+
+dose_path (create method)
+
+simple_form_for @dose(data)
+
+dose_path(patch)
+
+simple_form_for @cocktail, @dose(nil)
+
+new_cocktail_dose_path
+
+simple_form_for @cocktail, @dose(data)
+
+update_cocktail_dose_path -->
+
