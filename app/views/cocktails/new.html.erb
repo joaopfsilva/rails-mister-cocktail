@@ -3,4 +3,10 @@
 
   <%= render 'form' %>
 
-</div>
+  <% GoogleCustomSearchApi.search("mojito", searchType: "image" ).items.each do |item| %>
+   <%= image_tag item.link %>
+    <% end  %>
+
+
+<%= link_to "google", "link_to lool, 'www.google.com' " %>
+  </div>

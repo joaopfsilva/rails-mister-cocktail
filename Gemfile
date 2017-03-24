@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'brakeman'
+gem 'image_suckr'
+gem 'google_custom_search_api'
+gem 'cloudinary'
 gem 'figaro'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
