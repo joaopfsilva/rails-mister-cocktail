@@ -9,11 +9,10 @@
   <h1>Ingredients</h1>
   <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_cocktail_dose_path(@cocktail) %>
 
-  <% @ingredients.each do |ingredient| %>
+  <% @doses.each do |dose| %>
   <div class="panel panel-default">
-    <h4><%= ingredient.name %></h4>
-    <p><%= @doses.where(ingredient_id: ingredient).first.description%></p>
-    <br>
+    <h4><%= dose.ingredient.name %></h4>
+    <p><%= dose.description %></p>
   </div>
   <% end %>
 

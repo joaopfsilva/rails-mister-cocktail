@@ -17,7 +17,10 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    @ingredients = Ingredient.where(id: Dose.where(cocktail_id: @cocktail))
+    # @ingredients = Ingredient.where(id: Dose.where(cocktail_id: @cocktail))
+    @doses = @cocktail.doses
+
+
     @doses = Dose.where(cocktail_id: @cocktail)
     @ingredient = Ingredient.new
   end
